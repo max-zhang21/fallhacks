@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Journal</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to your external stylesheet -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- Second Page (hidden by default) -->
+    <div id="page2" class="container mt-5">
+        <h1 class="text-center mb-4">Title of the New Project</h1>
+
+        
+        <!-- Goal Setting Section -->
+        <div class="card mb-3">
+            <div class="card-header">Goal Setting</div>
+            <div class="card-body">
+                <textarea class="form-control" rows="5" placeholder="Write your goals here..."></textarea>
+            </div>
+        </div>
+            
+        <!-- Progress Tracker Section -->
+        <div class="card mb-3">
+            <div class="card-header">Progress Tracker</div>
+            <div class="card-body">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mood Tracking Section -->
+        <div class="card mb-3">
+            <div class="card-header">Mood Tracking</div>
+            <div class="card-body">
+                <select class="form-control">
+                    <option value="">Select your mood</option>
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="neutral">Neutral</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Motivational Quotes Section -->
+        <div class="card">
+            <div class="card-header">Motivational Quotes</div>
+            <div class="card-body">
+                <p>"Believe you can and you're halfway there." - Theodore Roosevelt</p>
+                <!-- Add more quotes or implement a method to fetch and display them -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script> <!-- External JavaScript file -->
+</body>
+</html>
