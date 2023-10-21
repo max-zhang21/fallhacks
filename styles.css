@@ -58,6 +58,12 @@ body {
 
 .leaves1 {
     transform: scale(1.5) rotate(180deg);
+    filter: blur(2px);
+}
+
+.leaves2 {
+    transform: scale(0.8) rotate(180deg);
+    filter: blur(4px);
 }
 
 @keyframes leaves1animation {
@@ -91,6 +97,7 @@ body {
     background-color: #4CAF50;
     color: white;
     padding: 12px 25px;
+    position: absolute;
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
