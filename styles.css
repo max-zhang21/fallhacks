@@ -13,6 +13,7 @@ body {
     width: 100%;
     height: 100%;
     background: radial-gradient(#ffb700, #ce4f00);
+    z-index: -2;
 }
 
 .leaves {
@@ -26,6 +27,7 @@ body {
 .leaves div {
     position: absolute;
     display: block;
+    z-index: -1;
 }
 
 .leaves div:nth-child(1) {
@@ -59,11 +61,13 @@ body {
 .leaves1 {
     transform: scale(1.5) rotate(180deg);
     filter: blur(2px);
+    z-index: -1;
 }
 
 .leaves2 {
     transform: scale(0.8) rotate(180deg);
     filter: blur(4px);
+    z-index: -1;
 }
 
 @keyframes leaves1animation {
@@ -110,6 +114,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .custom-btn:hover {
