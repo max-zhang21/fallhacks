@@ -1,0 +1,25 @@
+{
+  "name": "fallhacks",
+  "version": "1.0.0",
+  "description": "Fall Hacks 2023 project",
+  "main": "./src/scripts.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CakeWasTaken/fallhacks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CakeWasTaken/fallhacks/issues"
+  },
+  "homepage": "https://github.com/CakeWasTaken/fallhacks#readme",
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
