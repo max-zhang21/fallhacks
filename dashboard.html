@@ -1,100 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Journal</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="src/dashboard.css"> <!-- Link to your external stylesheet -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Digital Journal</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="src/dashboard.css" />
+    </head>
+    <body>
+        <!-- Second Page (hidden by default) -->
+        <div id="page2" class="container mt-5">
+            <h1 class="text-center mb-4">Title of the New Project</h1>
 
-    <!-- Second Page (hidden by default) -->
-    <div id="page2" class="container mt-5">
-        <h1 class="text-center mb-4">Title of the New Project</h1>
-
-        <!-- Goal Setting Section -->
-        <div class="card mb-3">
-            <div class="card-header">Goal Setting</div>
-            <div class="card-body">
-                <textarea class="form-control" rows="5" placeholder="Write your goals here..."></textarea>
+            <!-- Goal Setting Section -->
+            <div class="card mb-3">
+                <div class="card-header">Goal Setting</div>
+                <div class="card-body">
+                    <textarea class="form-control" rows="5" placeholder="Write your goals here..."></textarea>
+                </div>
             </div>
-        </div>
-            
-        <!-- Progress Tracker Section -->
-        <div class="card mb-3">
-            <div class="card-header">Progress Tracker</div>
-            <div class="card-body">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+
+            <!-- Progress Tracker Section -->
+            <div class="card mb-3">
+                <div class="card-header">Progress Tracker</div>
+                <div class="card-body">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mood Tracking Section -->
+            <div class="card mb-3">
+                <div class="card-header">Mood Tracking</div>
+                <div class="card-body">
+                    <label>
+                        <input type="radio" name="test" value="moodHappy" checked />
+                        <img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/d613e26d-a1bc-45c6-9227-efe404945ff3" alt="Happy" />
+                    </label>
+
+                    <label>
+                        <input type="radio" name="test" value="moodCalm" />
+                        <img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/f742047d-9367-4666-bd87-0633f6fb68fc" alt="Calm" />
+                    </label>
+
+                    <label>
+                        <input type="radio" name="test" value="moodUpset" />
+                        <img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/9d6e90f4-1091-4268-85a1-a92ff31e0263" alt="Upset" />
+                    </label>
+
+                    <label>
+                        <input type="radio" name="test" value="moodAngry" />
+                        <img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/8ca6b6be-7209-44df-9a9a-b7371b60a609" alt="Angry" />
+                    </label>
+
+                    <label>
+                        <input type="radio" name="test" value="moodAnxious" />
+                        <img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/125286ba-83e6-4a28-be74-4f8011f8cd44" alt="Anxious" />
+                    </label>
+                </div>
+            </div>
+
+            <!-- Motivational Quotes Section -->
+            <div class="card">
+                <div class="card-header">Motivational Quotes</div>
+                <div class="card-body">
+                    <p>"Believe you can and you're halfway there." - Theodore Roosevelt</p>
+                    <!-- Add more quotes or implement a method to fetch and display them -->
                 </div>
             </div>
         </div>
 
-        <!-- Mood Tracking Section -->
-        <div class="card mb-3">
-            <div class="card-header">Mood Tracking</div>
-            <div class="card-body">
-                <!-- <ul>
-                    <li><input type="radio" name="test" id="moodHappy" />
-                      <label for="moodHappy"><img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/251ceed9-7b11-4e02-b501-ee7958828b72" /></label>
-                    </li>
-                    <li><input type="radio" name="test" id="moodCalm" />
-                      <label for="moodCalm"><img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/2e488dc2-5bdb-4016-afef-dde194175279" /></label>
-                    </li>
-                    <li><input type="radio" name="test" id="moodUpset" />
-                      <label for="moodUpset"><img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/f3f81337-ae5f-4ae9-804f-b101fe6de4bf" /></label>
-                    </li>
-                    <li><input type="radio" name="test" id="moodAngry" />
-                      <label for="moodAngry"><img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/f0427990-bc12-4189-883b-dfdb286e32e0" /></label>
-                    </li>
-                    <li><input type="radio" name="test" id="moodAnxious" />
-                        <label for="moodAnxious"><img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/d22ed797-48c4-4ccf-a7bd-7b332294e503" /></label>
-                    </li>
-                  </ul> -->
-
-                  <label>
-                    <input type="radio" name="test" value="moodHappy" checked>
-                    <img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/d613e26d-a1bc-45c6-9227-efe404945ff3" alt="Happy">
-                  </label>
-                  
-                  <label>
-                    <input type="radio" name="test" value="moodCalm">
-                    <img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/f742047d-9367-4666-bd87-0633f6fb68fc" alt="Calm">
-                  </label>
-
-                  <label>
-                    <input type="radio" name="test" value="moodUpset">
-                    <img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/9d6e90f4-1091-4268-85a1-a92ff31e0263" alt="Upset">
-                  </label>
-
-                  <label>
-                    <input type="radio" name="test" value="moodAngry">
-                    <img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/8ca6b6be-7209-44df-9a9a-b7371b60a609" alt="Angry">
-                  </label>
-
-                  <label>
-                    <input type="radio" name="test" value="moodAnxious">
-                    <img src="https://github.com/CakeWasTaken/fallhacks/assets/99550445/125286ba-83e6-4a28-be74-4f8011f8cd44" alt="Anxious">
-                  </label>
-            </div>
-        </div>
-
-        <!-- Motivational Quotes Section -->
-        <div class="card">
-            <div class="card-header">Motivational Quotes</div>
-            <div class="card-body">
-                <p>"Believe you can and you're halfway there." - Theodore Roosevelt</p>
-                <!-- Add more quotes or implement a method to fetch and display them -->
-            </div>
-        </div>
-    </div>
-
-    <script src="scripts.js"></script> <!-- External JavaScript file -->
-</body>
+        <!-- External JavaScript file -->
+        <script src="scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
 </html>
