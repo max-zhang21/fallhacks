@@ -72,7 +72,7 @@ function loadData() {
         goalSection.appendChild(tasksContainer);
 
         let progressBarContainer = document.createElement('div');
-        progressBarContainer.id = goalText;
+        progressBarContainer.id = 'id_' + goalText;
         progressBarContainer.className = 'progress-bar-container';
 
         let progressBar = document.createElement('div');
@@ -151,7 +151,7 @@ function updateProgressBar(goalSection, goalText) {
     console.log(`Percentage of completed tasks in this goal: ${percentage}%`);
 
     // Update progress bar
-    let progressBar = goalSection.querySelector(`#${goalText} .progress-bar`);
+    let progressBar = goalSection.querySelector(`#id_${goalText} .progress-bar`);
     if (progressBar) {
         progressBar.style.width = `${percentage}%`;
         progressBar.textContent = `${percentage}%`;
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             goalSection.appendChild(tasksContainer);
 
             let progressBarContainer = document.createElement('div');
-            progressBarContainer.id = goalText;
+            progressBarContainer.id = 'id_' + goalText;
             progressBarContainer.className = 'progress-bar-container';
 
             let progressBar = document.createElement('div');
