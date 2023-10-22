@@ -59,6 +59,12 @@ p {
     font-size: 20px;
 }
 
+.name {
+    font-family: "Fredoka";
+    font-weight: 300;
+    font-size: 20px;
+}
+
 body {
     background: radial-gradient(#fffb00, #ffae00, #ff8c00, #ce1800);
 }
