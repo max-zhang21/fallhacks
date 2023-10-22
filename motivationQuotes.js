@@ -1,6 +1,6 @@
 const quoteText = document.querySelector(".quote"),
 authorName = document.querySelector(".author .name"),
-quoteBtn = document.querySelector("button");
+quoteBtn = document.getElementById("newQuoteButton");
 // random quote function
 function randomQuote(){
     // fetching random quotes from the API and parsing it into Javascript object
@@ -10,7 +10,7 @@ function randomQuote(){
         authorName.innerText = result.author;
     });
 }
-quoteBtn.addEventListener("click", randomQuote);
+// quoteBtn.addEventListener("click", randomQuote);
 
 // This code runs when the page is fully loaded
 document.addEventListener("DOMContentLoaded", function() {

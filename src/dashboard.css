@@ -65,6 +65,18 @@ p {
     font-size: 20px;
 }
 
+textarea {
+    font-family: "Fredoka";
+    font-weight: 300;
+    font-size: 20px;
+}
+
+input {
+    font-family: "Fredoka";
+    font-weight: 300;
+    font-size: 20px;
+}
+
 body {
     background: radial-gradient(#fffb00, #ffae00, #ff8c00, #ce1800);
 }
@@ -78,6 +90,21 @@ body {
     color: #000;
     display: block;
     width: 100%;
+    padding: 0px 0px;
+    cursor: pointer;
+    text-align: center;
+    border-color: #000;
+    border-width: 5px;
+}
+
+.newQuoteButton {
+    font-family: "Fredoka";
+    font-weight: 400;
+    font-size: 20px;
+    background-color: #d2d4d6;
+    color: #000;
+    display: block;
+    width: 10%;
     padding: 0px 0px;
     cursor: pointer;
     text-align: center;
