@@ -1,81 +1,75 @@
-$(document).ready(function() {
-    // Function to add a new goal
-    $('#add-goal-button').click(function() {
-        var goalText = $('#goal-input').val();
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('add-goal').addEventListener('click', function() {
+        var goalText = document.getElementById('new-goal').value.trim();
+
         if (goalText) {
-            // Create a new section for the goal
-            var goalSection = $('<div class="goal-section"></div>');
-            var goalTitle = $('<h3></h3>').text(goalText);
-            goalSection.append(goalTitle);
+            // Create goal section
+            var goalSection = document.createElement('div');
+            goalSection.className = 'goal-section';
 
-            // Add a task input and button
-            var taskInput = $('<input type="text" class="task-input" placeholder="Enter a task">');
-            var addTaskButton = $('<button class="add-task-button">Add Task</button>');
-            goalSection.append(taskInput).append(addTaskButton);
+            // Add goal title
+            var goalTitle = document.createElement('h3');
+            goalTitle.textContent = goalText;
+            goalSection.appendChild(goalTitle);
 
-            // Append to the main goals section
-            $('#goals-section').append(goalSection);
+            // Input for new task
+            var taskInput = document.createElement('input');
+            taskInput.type = 'text';
+            taskInput.className = 'form-control task-input';
+            taskInput.placeholder = 'Enter a new task';
+            goalSection.appendChild(taskInput);
+
+            // Add task button
+            var addTaskBtn = document.createElement('button');
+            addTaskBtn.textContent = 'Add Task';
+            addTaskBtn.className = 'btn btn-success mt-2 add-task-button';
+            goalSection.appendChild(addTaskBtn);
+
+            // Task container
+            var tasksContainer = document.createElement('div');
+            tasksContainer.className = 'tasks-container';
+            goalSection.appendChild(tasksContainer);
+
+            // Append to the main container
+            document.getElementById('goals-section').appendChild(goalSection);
 
             // Clear the input field
-            $('#goal-input').val('');
+            document.getElementById('new-goal').value = '';
 
-            // Handle adding tasks
-            addTaskButton.click(function() {
-                var taskText = taskInput.val();
+            // Listener for adding tasks
+            addTaskBtn.addEventListener('click', function() {
+                var taskText = taskInput.value.trim();
+
                 if (taskText) {
-                    // Create task item and progress bar
-                    var taskItem = $('<div class="task-item"></div>').text(taskText);
-                    var progressBarContainer = $('<div class="progress-bar-container"></div>');
-                    var progressBar = $('<div class="progress-bar"></div>');
-                    progressBarContainer.append(progressBar);
-                    
-                    // Append task and progress bar to the goal section
-                    goalSection.append(taskItem).append(progressBarContainer);
+                    // Create task item
+                    var taskItem = document.createElement('div');
+                    taskItem.className = 'task-item';
 
-                    // Make progress bar draggable and handle drag events
-                    progressBar.draggable({
-                        axis: "x",
-                        containment: "parent",
-                        drag: function(event, ui) {
-                            // Calculate the new width based on the drag event
-                            var maxWidth = progressBarContainer.width();
-                            var newWidth = ui.position.left;
+                    // Task title
+                    var taskTitle = document.createElement('div');
+                    taskTitle.textContent = taskText;
+                    taskItem.appendChild(taskTitle);
 
-                            // Ensure the new width isn't out of bounds
-                            if (newWidth < 0) {
-                                newWidth = 0;
-                            } else if (newWidth > maxWidth) {
-                                newWidth = maxWidth;
-                            }
+                    // Progress bar
+                    var progressBarContainer = document.createElement('div');
+                    progressBarContainer.className = 'progress-bar-container';
 
-                            // Apply the new width to the progress bar
-                            progressBar.width(newWidth + "px");
+                    var progressBar = document.createElement('div');
+                    progressBar.className = 'progress-bar';
+                    progressBar.style.width = '0%';  // Start with 0 progress
+                    progressBar.textContent = '0%';  // Text indication of progress
 
-                            // Optionally, calculate and display the percentage
-                            var percentage = Math.floor((newWidth / maxWidth) * 100);
-                            // You can display this percentage somewhere or use it in your logic
-                        },
-                        stop: function(event, ui) {
-                            // Actions to perform once the dragging stops, like saving the state
-                            var finalWidth = progressBar.width();
-                            var percentage = Math.floor((finalWidth / progressBarContainer.width()) * 100);
+                    progressBarContainer.appendChild(progressBar);
+                    taskItem.appendChild(progressBarContainer);
 
-                            // Log the final percentage
-                            console.log("Final progress is " + percentage + "%");
-
-                            // Simulating a server call to save the progress data
-                            console.log("Saving data to server...");
-
-                            // This is just a simulation. In a real application, you would make an AJAX request here.
-                            // Mocking a server call with a delay
-                            setTimeout(function() {
-                                console.log("Data saved successfully on the server!");
-                            }, 2000);  // 2 seconds delay to simulate server interaction
-                        }
-                    });
+                    // Append to tasks container
+                    tasksContainer.appendChild(taskItem);
 
                     // Clear the task input
-                    taskInput.val('');
+                    taskInput.value = '';
+
+                    // Here, you'd implement the functionality to drag and adjust the progress bar
+                    // This might involve additional scripts or libraries for drag-and-drop features
                 }
             });
         }

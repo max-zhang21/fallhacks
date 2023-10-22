@@ -57,7 +57,14 @@
     border-radius: 10px;
     overflow: hidden;
 }
-
+/* Style for the draggable handle in the progress bar */
+#draggable-handle {
+    height: 100%;
+    width: 20px; /* or as you prefer */
+    background-color: #fff; /* make it visible against the progress bar color */
+    display: inline-block;
+    cursor: grab; /* change the cursor to indicate draggable action */
+}
 .progress-bar {
     height: 100%;
     width: 0; /* Start with 0 progress */
