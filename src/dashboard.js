@@ -5,4 +5,5 @@ window.onload = function () {
         document.title = title;
         document.getElementById('dashboard-heading').textContent = title;
     }
+    console.log(title);
 };
