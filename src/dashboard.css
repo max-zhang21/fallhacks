@@ -1,3 +1,7 @@
+body {
+    overflow: auto;
+}
+
 /* HIDE RADIO */
 [type='radio'] {
     position: absolute;
