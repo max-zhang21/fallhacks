@@ -7,7 +7,7 @@ $(document).ready(function() {
             var goalSection = $('<div class="goal-section"></div>');
             var goalTitle = $('<h3></h3>').text(goalText);
             goalSection.append(goalTitle);
-
+ 
             // Add a task input and button
             var taskInput = $('<input type="text" class="task-input" placeholder="Enter a task">');
             var addTaskButton = $('<button class="add-task-button">Add Task</button>');

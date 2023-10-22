@@ -19,3 +19,22 @@
 label {
     margin-left: 10px;
 }
+
+
+.body-grindset-theme {
+    background-image: url('../images/themes/grindset.jpg');
+    background-size: cover; /* This ensures your image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.body-minimum-theme {
+    background-image: url('../images/themes/bareminimum.jpg');
+    background-size: cover; /* This ensures your image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.body-selfcare-theme {
+    background-image: url('../images/themes/selfcare.jpg');
+    background-size: cover; /* This ensures your image covers the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
