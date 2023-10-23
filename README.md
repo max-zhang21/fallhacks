@@ -4,7 +4,9 @@ Are you ready to turn over a new leaf in your life and embark on a journey of pe
 
 With **Leaf to Success**, you can effortlessly document your aspirations, monitor your progress, and draw inspiration from amazing quotes. It's time to transform your dreams into reality, and **Leaf to Success** is here to guide you every step of the way. Start your journey to personal growth today and watch your life flourish like never before. Join **Leaf to Success** and become the best version of yourself!
 
-![Leaf to Success - Home page](https://github.com/CakeWasTaken/fallhacks/assets/96852675/764cc81e-778d-41ed-9d2a-7e688abc83a3)
+<p align="center">
+    <img src="https://github.com/CakeWasTaken/fallhacks/assets/96852675/764cc81e-778d-41ed-9d2a-7e688abc83a3" width="800px" height="auto"/>
+</p>
 
 ## File Structure
 
